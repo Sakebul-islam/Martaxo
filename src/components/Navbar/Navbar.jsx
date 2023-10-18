@@ -28,6 +28,18 @@ const Navbar = () => {
             </li>
             <li className=''>
               <NavLink
+                to='/addbrands'
+                className={({ isActive }) =>
+                  `${
+                    isActive ? 'bg-orange-600 text-white' : ''
+                  } px-3 py-2 sm:px-4 sm:py-3 inline-block`
+                }
+              >
+                Add Brand
+              </NavLink>
+            </li>
+            <li className=''>
+              <NavLink
                 to='/addproduct'
                 className={({ isActive }) =>
                   `${
