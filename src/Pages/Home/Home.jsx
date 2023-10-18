@@ -1,10 +1,9 @@
-
+import Map from '../../components/Map/Map';
 
 const Home = () => {
-
-  
   return (
     <>
+      <Map />
     </>
   );
 };
