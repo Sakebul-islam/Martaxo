@@ -8,8 +8,8 @@ const Navbar = () => {
     <div className='bg-gray-200 shadow shadow-gray-300 lg:sticky top-0 z-50'>
       <div className='container mx-auto flex flex-col lg:flex-row justify-between items-center py-5 gap-6'>
         <figure className='max-w-[200px]'>
-          <Link to='/' title='MsSocial' draggable='false'>
-            <img src={logo} alt='MsSocial' draggable='false' />
+          <Link to='/' title='MARTAXO' draggable='false'>
+            <img src={logo} alt='MARTAXO' draggable='false' />
           </Link>
         </figure>
         <div className='gap-3 sm:gap-5 flex flex-col md:flex-row justify-between items-center'>
