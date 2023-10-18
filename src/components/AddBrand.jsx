@@ -7,7 +7,7 @@ const AddBrand = () => {
   const handleBrand = (e) => {
     e.preventDefault();
     const form = e.target;
-    const brandName = form.brandName.value;
+    const brandName = form.brandName.value.toLowerCase();
     const brandImage = form.brandImage.value;
     const brand = { brandName, brandImage };
 
