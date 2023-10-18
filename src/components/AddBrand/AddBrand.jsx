@@ -27,13 +27,13 @@ const AddBrand = () => {
       });
   };
   return (
-    <div>
-      <div className='hero min-h-screen bg-base-200 py-8 md:py-0'>
+    <>
+      <div className='hero bg-base-200 py-12'>
         <div className='hero-content flex-col w-full'>
           <div className='text-center lg:text-left'>
             <h1 className='text-5xl font-bold mb-5'>Add Brand</h1>
           </div>
-          <div className='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
+          <div className='card flex-shrink-0 w-full max-w-sm bg-base-100 rounded-none shadow-lg'>
             <form className='card-body' onSubmit={handleBrand}>
               <div className='form-control'>
                 <label className='label'>
@@ -43,30 +43,32 @@ const AddBrand = () => {
                   type='text'
                   name='brandName'
                   placeholder='Enter Brand Name'
-                  className='input input-bordered'
+                  className='input input-bordered rounded-sm'
                   required
                 />
               </div>
               <div className='form-control'>
                 <label className='label'>
-                  <span className='label-text'>Brand Image</span>
+                  <span className='label-text'>Brand Logo</span>
                 </label>
                 <input
                   type='text'
                   name='brandImage'
-                  placeholder='Enter Brand Image URL'
-                  className='input input-bordered'
+                  placeholder='Enter Brand Logo URL'
+                  className='input input-bordered rounded-sm'
                   required
                 />
               </div>
               <div className='form-control mt-6'>
-                <button className='btn btn-primary'>Login</button>
+                <button className='btn bg-orange-500 hover:bg-green-500 text-white'>
+                  Login
+                </button>
               </div>
             </form>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

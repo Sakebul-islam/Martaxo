@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Root from '../Layout/root';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import Home from '../Pages/Home/Home';
-import AddBrand from '../components/AddBrand';
+import AddBrand from '../components/AddBrand/AddBrand';
 const routes = createBrowserRouter([
   {
     path: '/',

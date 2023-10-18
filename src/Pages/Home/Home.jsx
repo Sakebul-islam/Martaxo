@@ -1,13 +1,15 @@
 import { useLoaderData } from 'react-router-dom';
 import Map from '../../components/Map/Map';
 import BrandSection from '../../components/BrandSection/BrandSection';
+import Banner from '../../components/Banner/Banner';
 
 const Home = () => {
   const brands = useLoaderData();
   console.log(brands);
   return (
     <>
-      <BrandSection brands={brands}/>
+      <Banner />
+      <BrandSection brands={brands} />
       <Map />
     </>
   );
