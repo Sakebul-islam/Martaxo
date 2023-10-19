@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import bannerBg from '../../assets/images/banner.jpg';
 import titanium from '../../assets/images/titanium.jpg';
 
@@ -13,9 +14,12 @@ function Banner() {
         <figure className='mb-4'>
           <img src={titanium} alt='iPhone 15Pro' />
         </figure>
-        <button className='btn btn-info !h-auto min-h-0 !w-auto !px-5 !py-2 !leading-normal !rounded-full font-bold text-white'>
+        <Link
+          to='/apple'
+          className='btn btn-info !h-auto min-h-0 !w-auto !px-5 !py-2 !leading-normal !rounded-full font-bold text-white'
+        >
           Buy
-        </button>
+        </Link>
       </div>
     </div>
   );

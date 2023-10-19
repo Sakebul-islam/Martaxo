@@ -3,6 +3,7 @@ import Root from '../Layout/root';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import Home from '../Pages/Home/Home';
 import AddBrand from '../components/AddBrand/AddBrand';
+import AddProduct from '../Pages/AddProduct/AddProduct';
 const routes = createBrowserRouter([
   {
     path: '/',
@@ -17,6 +18,11 @@ const routes = createBrowserRouter([
       {
         path: '/addbrands',
         element: <AddBrand />,
+      },
+      {
+        path: '/addproduct',
+        element: <AddProduct />,
+        loader: () => fetch('http://localhost:5000/brands'),
       },
     ],
   },
