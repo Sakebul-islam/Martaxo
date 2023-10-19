@@ -11,7 +11,7 @@ const BrandCard = ({ brand }) => {
           src={brand.brandImage}
           alt={brand.brandName}
           title={brand.brandName}
-          className='w-full' // You should specify the width of the image as needed
+          className='w-full'
         />
       </figure>
       <div
