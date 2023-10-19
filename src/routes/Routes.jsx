@@ -4,6 +4,7 @@ import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import Home from '../Pages/Home/Home';
 import AddBrand from '../components/AddBrand/AddBrand';
 import AddProduct from '../Pages/AddProduct/AddProduct';
+import BrandDetails from '../Pages/BrandDetails/BrandDetails';
 const routes = createBrowserRouter([
   {
     path: '/',
@@ -22,6 +23,11 @@ const routes = createBrowserRouter([
       {
         path: '/addproduct',
         element: <AddProduct />,
+        loader: () => fetch('http://localhost:5000/brands'),
+      },
+      {
+        path: '/:brandpath',
+        element: <BrandDetails />,
         loader: () => fetch('http://localhost:5000/brands'),
       },
     ],
