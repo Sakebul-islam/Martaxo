@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Root from '../Layout/root';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import Home from '../Pages/Home/Home';
-import AddBrand from '../components/AddBrand/AddBrand';
+import AddBrand from '../Pages/AddBrand/AddBrand';
 import AddProduct from '../Pages/AddProduct/AddProduct';
 import BrandDetails from '../Pages/BrandDetails/BrandDetails';
 const routes = createBrowserRouter([

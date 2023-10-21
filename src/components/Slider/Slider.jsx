@@ -10,12 +10,13 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { useState } from 'react';
 
 const Slider = ({ brand }) => {
-  const { brandName, sliderImage } = brand;
+  const { sliderImage } = brand;
   return (
     <>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
+        loop={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

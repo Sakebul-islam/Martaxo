@@ -123,7 +123,7 @@ const ProductForm = () => {
               $
             </span>
             <input
-              type='number'
+              type='text'
               name='itemPrice'
               id='itemPrice'
               placeholder='1000'

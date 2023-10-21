@@ -9,8 +9,12 @@ const AddBrand = () => {
     const form = e.target;
     const brandName = form.brandName.value.toLowerCase();
     const brandImage = form.brandImage.value;
-    const brand = { brandName, brandImage };
-
+    const brandSlider1 = form.brandSlider1.value;
+    const brandSlider2 = form.brandSlider2.value;
+    const brandSlider3 = form.brandSlider3.value;
+    const sliderImage = { 0: brandSlider1, 1: brandSlider2, 2: brandSlider3 };
+    const brand = { brandName, brandImage, sliderImage };
+    console.log(brandSlider1, brandSlider2, brandSlider3);
     fetch('http://localhost:5000/brands', {
       method: 'POST',
       headers: {
@@ -55,6 +59,32 @@ const AddBrand = () => {
                   type='text'
                   name='brandImage'
                   placeholder='Enter Brand Logo URL'
+                  className='input input-bordered rounded-sm'
+                  required
+                />
+              </div>
+              <div className='form-control gap-2'>
+                <label className='label'>
+                  <span className='label-text'>Brand Slider Images</span>
+                </label>
+                <input
+                  type='text'
+                  name='brandSlider1'
+                  placeholder='Enter Brand Slider Image URL - 1'
+                  className='input input-bordered rounded-sm'
+                  required
+                />
+                <input
+                  type='text'
+                  name='brandSlider2'
+                  placeholder='Enter Brand Slider Image URL - 2'
+                  className='input input-bordered rounded-sm'
+                  required
+                />
+                <input
+                  type='text'
+                  name='brandSlider3'
+                  placeholder='Enter Brand Slider Image URL - 3'
                   className='input input-bordered rounded-sm'
                   required
                 />
