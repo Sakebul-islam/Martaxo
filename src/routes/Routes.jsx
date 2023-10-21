@@ -26,7 +26,7 @@ const routes = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/brands'),
       },
       {
-        path: '/:brandpath',
+        path: '/brand/:brandpath',
         element: <BrandDetails />,
         loader: () => fetch('http://localhost:5000/brands'),
       },

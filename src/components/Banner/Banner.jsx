@@ -15,7 +15,7 @@ function Banner() {
           <img src={titanium} alt='iPhone 15Pro' />
         </figure>
         <Link
-          to='/apple'
+          to='/brand/apple'
           className='btn btn-info !h-auto min-h-0 !w-auto !px-5 !py-2 !leading-normal !rounded-full font-bold text-white'
         >
           Buy
