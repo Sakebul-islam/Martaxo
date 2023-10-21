@@ -1,6 +1,7 @@
 import { Rating } from '@smastrom/react-rating';
 
 import '@smastrom/react-rating/style.css';
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
   const {
@@ -13,8 +14,9 @@ const ProductCard = ({ product }) => {
     itemPrice,
     rating,
   } = product;
+
   return (
-    <div className='p-4 bg-neutral-200'>
+    <div className='p-4 bg-neutral-200 w-screen sm:w-auto'>
       <figure className='bg-white'>
         <img src={itemImage} alt={itemName} title={itemName} />
       </figure>
@@ -42,12 +44,15 @@ const ProductCard = ({ product }) => {
         </div>
         <div className='divider'></div>
         <div className='flex justify-between items-center'>
-          <button className='btn bg-orange-500 hover:bg-green-500 text-white font-bold'>
+          <button className='btn rounded-none bg-orange-500 hover:bg-green-500 text-white font-bold'>
             Details
           </button>
-          <button className='btn bg-orange-500 hover:bg-green-500 text-white font-bold'>
+          <Link
+            to={`/brand/${brandName}/${_id}`}
+            className='btn rounded-none bg-orange-500 hover:bg-green-500 text-white font-bold'
+          >
             Update
-          </button>
+          </Link>
         </div>
       </div>
     </div>

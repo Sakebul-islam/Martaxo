@@ -21,7 +21,7 @@ const BrandDetails = () => {
   }, [brandpath]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${brandpath}`)
+    fetch(`http://localhost:5000/products/brand/${brandpath}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -30,7 +30,6 @@ const BrandDetails = () => {
       })
       .catch((error) => console.error('Error fetching brand data: ', error));
   }, [brandpath]);
-
 
   return (
     <div>
@@ -47,7 +46,7 @@ const BrandDetails = () => {
             <span className='loading loading-ring loading-lg'></span>
           </div>
         ) : (
-          <div className='grid grid-cols-4 gap-6'>
+          <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
             {products.map((product) => (
               <ProductCard key={product._id} product={product} />
             ))}
