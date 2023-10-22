@@ -3,15 +3,19 @@ import logo from '../../assets/images/logo.png';
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col items-center bg-neutral-200 text-center text-white dark:bg-gray-300'>
+    <footer className='flex flex-col items-center bg-neutral-200 dark:bg-neutral-800 text-center text-white dark:bg-gray-300'>
       <div className='container pt-9'>
         <div className='mb-9 gap-6 sm:gap-0 flex flex-col sm:flex-row justify-center items-center sm:justify-between'>
-          <figure>
-            <img
-              src={logo}
-              alt='MARTAXO'
-              className='max-w-[200px] drop-shadow-lg'
-            />
+          <figure className='max-w-[200px]'>
+            <Link
+              to='/'
+              title='MARTAXO'
+              draggable='false'
+              className='flex gap-1 justify-start items-center text-xl font-bold text-black dark:text-white drop-shadow-[0px_0px_1px_rgba(255,255,255,9)]'
+            >
+              <img src={logo} alt='MARTAXO' draggable='false' />
+              <h2>MARTAXO</h2>
+            </Link>
           </figure>
           <div className='gap-5 flex justify-center'>
             <Link

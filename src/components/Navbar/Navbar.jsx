@@ -2,14 +2,21 @@ import { Link, NavLink } from 'react-router-dom';
 import { CgProfile } from 'react-icons/cg';
 
 import logo from '../../assets/images/logo.png';
+import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
 const Navbar = () => {
   return (
-    <div className='bg-gray-200 shadow shadow-gray-300 lg:sticky top-0 z-50'>
+    <div className='bg-gray-200 dark:bg-gray-950 shadow  lg:sticky top-0 z-50'>
       <div className='container mx-auto flex flex-col xl:flex-row justify-between items-center py-5 gap-6'>
         <figure className='max-w-[200px]'>
-          <Link to='/' title='MARTAXO' draggable='false'>
+          <Link
+            to='/'
+            title='MARTAXO'
+            draggable='false'
+            className='flex gap-1 justify-start items-center text-xl font-bold text-black dark:text-white drop-shadow-[0px_0px_1px_rgba(255,255,255,9)]'
+          >
             <img src={logo} alt='MARTAXO' draggable='false' />
+            <h2>MARTAXO</h2>
           </Link>
         </figure>
         <div className='gap-3 sm:gap-5 flex flex-col lg:flex-row justify-between items-center'>
@@ -18,9 +25,9 @@ const Navbar = () => {
               <NavLink
                 to='/'
                 className={({ isActive }) =>
-                  `${
-                    isActive ? 'bg-orange-600 text-white' : ''
-                  } px-3 py-2 sm:px-4 sm:py-3 inline-block`
+                  `
+                  px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white
+                  ${isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''}`
                 }
               >
                 Home
@@ -30,9 +37,9 @@ const Navbar = () => {
               <NavLink
                 to='/addbrands'
                 className={({ isActive }) =>
-                  `${
-                    isActive ? 'bg-orange-600 text-white' : ''
-                  } px-3 py-2 sm:px-4 sm:py-3 inline-block`
+                  `
+                  px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white
+                  ${isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''}`
                 }
               >
                 Add Brand
@@ -42,9 +49,9 @@ const Navbar = () => {
               <NavLink
                 to='/addproduct'
                 className={({ isActive }) =>
-                  `${
-                    isActive ? 'bg-orange-600 text-white' : ''
-                  } px-3 py-2 sm:px-4 sm:py-3 inline-block`
+                  `
+                  px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white
+                  ${isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''}`
                 }
               >
                 Add Product
@@ -54,9 +61,9 @@ const Navbar = () => {
               <NavLink
                 to='/cart'
                 className={({ isActive }) =>
-                  `${
-                    isActive ? 'bg-orange-600 text-white' : ''
-                  } px-3 py-2 sm:px-4 sm:py-3 inline-block`
+                  `
+                  px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white
+                  ${isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''}`
                 }
               >
                 My Cart
@@ -66,9 +73,9 @@ const Navbar = () => {
               <NavLink
                 to='/contact'
                 className={({ isActive }) =>
-                  `${
-                    isActive ? 'bg-orange-600 text-white' : ''
-                  } px-3 py-2 sm:px-4 sm:py-3 inline-block`
+                  `
+                  px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white
+                  ${isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''}`
                 }
               >
                 Contact
@@ -78,9 +85,9 @@ const Navbar = () => {
               <NavLink
                 to='/profile'
                 className={({ isActive }) =>
-                  `${
-                    isActive ? 'bg-orange-600 text-white' : ''
-                  } px-3 py-2 sm:px-4 sm:py-3 inline-block`
+                  `
+                  px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white
+                  ${isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''}`
                 }
               >
                 Profile
@@ -96,11 +103,12 @@ const Navbar = () => {
             </ul>
             <div>
               <Link to='/login'>
-                <button className='px-2 py-1 sm:px-4 sm:py-2 bg-black text-white font-bold text-lg'>
+                <button className='px-2 py-1 sm:px-4 sm:py-2 bg-black dark:bg-white text-white dark:text-black font-bold text-lg'>
                   Login
                 </button>
               </Link>
             </div>
+            <ThemeSwitcher />
           </div>
         </div>
       </div>

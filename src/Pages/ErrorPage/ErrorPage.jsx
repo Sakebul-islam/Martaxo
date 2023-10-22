@@ -8,7 +8,7 @@ const ErrorPage = () => {
   return (
     <div
       id='error-page'
-      className='w-full h-screen flex flex-col justify-center items-center bg-gray-300 space-y-6'
+      className='w-full h-screen flex flex-col justify-center items-center bg-gray-800 space-y-6'
     >
       <h1 className='text-5xl font-bold -mb-3 text-red-600'>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>

@@ -1,6 +1,6 @@
 const Map = () => {
   return (
-    <div className='pt-10 bg-white overflow-hidden'>
+    <div className='pt-10 bg-white dark:bg-black text-black dark:text-white overflow-hidden'>
       <h2
         className='text-4xl md:text-6xl text-center font-bold mb-10'
         data-aos='flip-left'

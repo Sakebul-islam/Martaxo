@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
   } = product;
 
   return (
-    <div className='p-4 bg-neutral-200 w-screen sm:w-auto'>
+    <div className='p-4 bg-neutral-200 dark:text-white dark:bg-neutral-600 w-screen sm:w-auto'>
       <figure className='bg-white'>
         <img src={itemImage} alt={itemName} title={itemName} />
       </figure>
@@ -44,9 +44,12 @@ const ProductCard = ({ product }) => {
         </div>
         <div className='divider'></div>
         <div className='flex justify-between items-center'>
-          <button className='btn rounded-none bg-orange-500 hover:bg-green-500 text-white font-bold'>
+          <Link
+            to={`/product/${_id}`}
+            className='btn rounded-none bg-orange-500 hover:bg-green-500 text-white font-bold'
+          >
             Details
-          </button>
+          </Link>
           <Link
             to={`/brand/${brandName}/${_id}`}
             className='btn rounded-none bg-orange-500 hover:bg-green-500 text-white font-bold'

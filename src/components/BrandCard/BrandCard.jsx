@@ -6,7 +6,7 @@ const BrandCard = ({ brand }) => {
       to={`brand/${brand.brandName}`}
       className='relative h-full place-content-center rounded-md inline-block'
     >
-      <figure className='bg-gray-100 flex justify-center items-center p-2 rounded-md'>
+      <figure className='bg-gray-200 dark:bg-gray-50 flex justify-center items-center p-2 rounded-md'>
         <img
           src={brand.brandImage}
           alt={brand.brandName}

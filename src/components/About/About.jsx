@@ -2,10 +2,10 @@ import about_us from '../../assets/images/About_us3.svg';
 
 const About = () => {
   return (
-    <div className='py-12 bg-white'>
+    <div className='py-12 bg-white dark:bg-black'>
       <div className='container mx-auto overflow-hidden'>
         <h2
-          className='text-4xl md:text-6xl text-center font-bold mb-10'
+          className='text-4xl md:text-6xl text-center font-bold mb-10 text-black dark:text-white'
           data-aos='flip-left'
         >
           About Us
@@ -14,7 +14,7 @@ const About = () => {
           <figure className='sm:order-1 max-h-none' data-aos='zoom-in'>
             <img src={about_us} alt='' className='h-full' />
           </figure>
-          <div className='text-left order-1 sm:order-2'>
+          <div className='text-left order-1 sm:order-2 text-black dark:text-white'>
             <h3 className='text-3xl py-3 font-bold'>Welcome to Martaxo</h3>
             <p className='mb-2 font-medium text-sm'>
               At Martaxo, we are passionate about bringing the latest

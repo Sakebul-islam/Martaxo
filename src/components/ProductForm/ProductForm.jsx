@@ -68,7 +68,7 @@ const ProductForm = () => {
     }
   };
   return (
-    <div className='w-2/4 shadow-2xl mx-auto p-8 my-16 bg-neutral-200'>
+    <div className='w-2/4 shadow-2xl mx-auto p-8 my-16 bg-gray-300 text-black'>
       <form onSubmit={handleFormData} className='flex flex-col gap-6'>
         <div className='flex flex-col gap-2'>
           <label htmlFor='name'>Item Name</label>
@@ -77,7 +77,7 @@ const ProductForm = () => {
             name='itemName'
             id='itemName'
             placeholder='Please Enter Item Name'
-            className='focus:outline-none p-2'
+            className='focus:outline-none p-2 bg-white'
           />
         </div>
         <div className='flex flex-col gap-2'>
@@ -87,7 +87,7 @@ const ProductForm = () => {
             name='itemImage'
             id='itemImage'
             placeholder='Please Enter Image URL'
-            className='focus:outline-none p-2'
+            className='focus:outline-none p-2 bg-white'
           />
         </div>
         <div className='flex flex-col gap-2'>
@@ -95,7 +95,7 @@ const ProductForm = () => {
           <select
             name='brandName'
             id='brandName'
-            className='focus:outline-none p-2 capitalize'
+            className='focus:outline-none p-2 capitalize bg-white'
           >
             <option defaultValue='na'>Select One</option>
 
@@ -113,7 +113,7 @@ const ProductForm = () => {
             name='itemCatagory'
             id='itemCatagory'
             placeholder='Please Enter Item Name'
-            className='focus:outline-none p-2'
+            className='focus:outline-none p-2 bg-white'
           />
         </div>
         <div className='flex flex-col gap-2'>
@@ -127,7 +127,7 @@ const ProductForm = () => {
               name='itemPrice'
               id='itemPrice'
               placeholder='1000'
-              className='focus:outline-none w-full p-2 ml-10'
+              className='focus:outline-none w-full p-2 ml-10 bg-white'
             />
           </div>
         </div>
@@ -138,7 +138,7 @@ const ProductForm = () => {
             id='discription'
             cols='30'
             rows='8'
-            className='focus:outline-none p-2 resize-none'
+            className='focus:outline-none p-2 resize-none bg-white'
           ></textarea>
         </div>
         <div className='flex flex-col gap-2'>

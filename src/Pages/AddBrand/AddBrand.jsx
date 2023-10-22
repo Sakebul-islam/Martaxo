@@ -32,7 +32,7 @@ const AddBrand = () => {
   };
   return (
     <>
-      <div className='hero bg-base-200 py-12'>
+      <div className='hero bg-base-300 py-12'>
         <div className='hero-content flex-col w-full'>
           <div className='text-center lg:text-left'>
             <h1 className='text-5xl font-bold mb-5'>Add Brand</h1>
@@ -47,7 +47,7 @@ const AddBrand = () => {
                   type='text'
                   name='brandName'
                   placeholder='Enter Brand Name'
-                  className='input input-bordered rounded-sm'
+                  className='input input-bordered rounded-sm !bg-white'
                   required
                 />
               </div>
@@ -59,7 +59,7 @@ const AddBrand = () => {
                   type='text'
                   name='brandImage'
                   placeholder='Enter Brand Logo URL'
-                  className='input input-bordered rounded-sm'
+                  className='input input-bordered rounded-sm !bg-white'
                   required
                 />
               </div>
@@ -71,26 +71,26 @@ const AddBrand = () => {
                   type='text'
                   name='brandSlider1'
                   placeholder='Enter Brand Slider Image URL - 1'
-                  className='input input-bordered rounded-sm'
+                  className='input input-bordered rounded-sm !bg-white'
                   required
                 />
                 <input
                   type='text'
                   name='brandSlider2'
                   placeholder='Enter Brand Slider Image URL - 2'
-                  className='input input-bordered rounded-sm'
+                  className='input input-bordered rounded-sm !bg-white'
                   required
                 />
                 <input
                   type='text'
                   name='brandSlider3'
                   placeholder='Enter Brand Slider Image URL - 3'
-                  className='input input-bordered rounded-sm'
+                  className='input input-bordered rounded-sm !bg-white'
                   required
                 />
               </div>
               <div className='form-control mt-6'>
-                <button className='btn bg-orange-500 hover:bg-green-500 text-white'>
+                <button className='btn bg-orange-500 hover:bg-green-500 text-white rounded-none'>
                   Login
                 </button>
               </div>

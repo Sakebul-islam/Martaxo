@@ -4,7 +4,7 @@ import Footer from '../components/Footer/Footer';
 
 const Root = () => {
   return (
-    <div className='font-redHed text-base'>
+    <div className='font-redHed text-base bg-white dark:bg-black'>
       <Navbar />
       <Outlet />
       <Footer />

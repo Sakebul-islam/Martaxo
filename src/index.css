@@ -25,3 +25,22 @@ input[type='number']::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;
 }
+.swiper-button-prev::after {
+margin-left: 25px;
+}
+.swiper-button-next::after {
+  margin-right: 25px;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #fff;
+  font-size: x-large;
+  background: #ffffff2d;
+  border-radius: 50%;
+  padding: 8px 13px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 2px solid orchid;
+}

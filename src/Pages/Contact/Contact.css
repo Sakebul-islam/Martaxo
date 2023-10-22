@@ -1,4 +1,4 @@
-.parent {
+.contact-page .parent {
   background: white;
   width: 90%;
   max-width: 800px;
@@ -6,75 +6,100 @@
   font-family: Calibri, Arial, sans-serif;
   padding: 20px;
 }
+
 /* h1,
 p {
   text-align: center;
 } */
-label {
+.contact-page label {
   display: block;
   margin: 1em 0 0.2em;
 }
 /* single-line text, checkbox, and button */
-input,
-select,
-textarea {
+.contact-page input,
+.contact-page select,
+.contact-page textarea {
   display: block;
   width: 100%;
   padding: 0.5rem !important;
   font-size: 20px;
-  background-color: #fbfbfb;
   border: solid 1px #ccc;
   resize: vertical;
 }
-textarea {
+html.light .contact-page input,
+html.light .contact-page select,
+html.light .contact-page textarea {
+  background-color: #fbfbfb;
+}
+html.dark .contact-page input,
+html.dark .contact-page select,
+html.dark .contact-page textarea {
+  background-color: #000;
+}
+.contact-page textarea {
   min-height: 200px;
 }
-select {
+.contact-page select {
   color: indigo;
 }
-option {
-  color: blue;
+.contact-page option {
+  color: black;
   background: lavenderBlush;
 }
-input[type='checkbox'] {
+.contact-page input[type='checkbox'] {
   display: inline;
   width: auto;
   color: red;
 }
 
-input[type='submit'] {
+html.light .contact-page input[type='submit'] {
   background: lightcoral;
   margin: 1em 0 0;
   color: white;
   border: none;
-  border-radius: 8px;
+  transition: all 0.3s ease-out;
+}
+html.dark .contact-page input[type='submit'] {
+  background: lightcoral;
+  margin: 1em 0 0;
+  color: white;
+  border: none;
   transition: all 0.3s ease-out;
 }
 
-input:focus,
-input:hover,
-select:focus,
-select:hover,
-textarea:focus,
-textarea:hover {
+html.light .contact-page input:focus,
+html.light .contact-page input:hover,
+html.light .contact-page select:focus,
+html.light .contact-page select:hover,
+html.light .contact-page textarea:focus,
+html.light .contact-page textarea:hover {
   background: lavenderBlush;
 }
 
+html.dark .contact-page input:focus,
+html.dark .contact-page input:hover,
+html.dark .contact-page select:focus,
+html.dark .contact-page select:hover,
+html.dark .contact-page textarea:focus,
+html.dark .contact-page textarea:hover {
+  background: black;
+}
+
 /* hover and focus states */
-input[type='submit']:hover,
-input[type='submit']:focus {
+.contact-page input[type='submit']:hover,
+.contact-page input[type='submit']:focus {
   background: lightgreen;
   outline: none;
 }
 
 @media screen and (min-width: 600px) {
   /*  make the form 2 columns */
-  form:after {
+  .contact-page form:after {
     content: '';
     display: block;
     clear: both;
   }
-  .column {
+  .contact-page .column {
     width: 50%;
     padding: 1em;
     float: left;

@@ -3,7 +3,7 @@ import ProductForm from '../../components/ProductForm/ProductForm';
 const AddProduct = () => {
     
   return (
-    <div>
+    <div className=''>
       <ProductForm />
     </div>
   );
