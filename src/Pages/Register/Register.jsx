@@ -111,7 +111,7 @@ const Register = () => {
   return (
     <div className='container mx-auto'>
       <form
-        className='text-center w-11/12 md:w-1/2 mx-auto my-6 bg-slate-300 p-6'
+        className='text-center w-11/12 md:w-1/2 mx-auto my-6 bg-gray-200 dark:bg-slate-300 text-black p-6'
         onSubmit={handleRegister}
       >
         <legend className='text-2xl font-bold'>Resistration Form</legend>
@@ -179,7 +179,7 @@ const Register = () => {
             Sign In
           </Link>
         </div>
-        <div className='divider'>OR</div>
+        <div className='divider after:bg-black before:bg-black'>OR</div>
         <LoginWith />
       </form>
     </div>

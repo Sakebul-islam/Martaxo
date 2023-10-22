@@ -68,10 +68,10 @@ const Login = () => {
   return (
     <div className='container mx-auto'>
       <form
-        className='text-center w-11/12 md:w-1/2 mx-auto my-6 bg-slate-300 p-6'
+        className='text-center w-11/12 md:w-1/2 mx-auto my-6 bg-gray-200 dark:bg-slate-300 text-black p-6'
         onSubmit={handleLogin}
       >
-        <legend className='text-2xl font-bold'>Resistration Form</legend>
+        <legend className='text-2xl font-bold'>Signin Form</legend>
 
         <div className='flex flex-col text-left my-4'>
           <label htmlFor='email'>Enter Email</label>
@@ -80,6 +80,7 @@ const Login = () => {
             type='email'
             name='email'
             id='email'
+            placeholder='Please Enter Your Email'
             required
           />
         </div>
@@ -91,6 +92,7 @@ const Login = () => {
               type={showPassword ? 'text' : 'password'}
               name='password'
               id='password'
+              placeholder='Please Enter Your Passwoard'
               required
             />
             <span
@@ -108,12 +110,12 @@ const Login = () => {
           </button>
         </div>
         <div>
-          Create a new account
+          Create a new account&nbsp;
           <Link to='/register' className='text-blue-600 font-semibold'>
             Sign Up
           </Link>
         </div>
-        <div className='divider'>OR</div>
+        <div className='divider after:bg-black before:bg-black'>OR</div>
         <LoginWith />
       </form>
       <ToastContainer />
