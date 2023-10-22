@@ -6,6 +6,9 @@ import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useContext, useEffect, useState } from 'react';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Navbar = () => {
   const { user, logOut, loading } = useContext(AuthContext);
   const [presentUser, setPresentUser] = useState({
@@ -29,16 +32,16 @@ const Navbar = () => {
   const handleSignout = () => {
     logOut()
       .then(() => {
-        // toast.error('Successfully Logout', {
-        //   position: 'bottom-right',
-        //   autoClose: 1000,
-        //   hideProgressBar: false,
-        //   closeOnClick: true,
-        //   pauseOnHover: true,
-        //   draggable: true,
-        //   progress: undefined,
-        //   theme: 'light',
-        // });
+        toast.error('Successfully Logout', {
+          position: 'bottom-right',
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'light',
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -160,7 +163,7 @@ const Navbar = () => {
                   <CgProfile className='text-2xl sm:text-4xl' />
                 )}
               </li>
-              <li className=''>
+              <li className='text-black dark:text-white'>
                 <p>{presentUser?.name ? presentUser?.name : 'User Name'}</p>
               </li>
             </ul>
@@ -168,7 +171,7 @@ const Navbar = () => {
               {user ? (
                 <Link to='/login'>
                   <button
-                    className='px-2 py-1 sm:px-4 sm:py-2 bg-black text-white font-bold text-lg'
+                    className='px-2 py-1 sm:px-4 sm:py-2 bg-black dark:bg-white text-white dark:text-black font-bold text-lg'
                     onClick={handleSignout}
                   >
                     Sign Out
@@ -186,6 +189,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

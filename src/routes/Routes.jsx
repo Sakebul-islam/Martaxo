@@ -8,6 +8,8 @@ import BrandDetails from '../Pages/BrandDetails/BrandDetails';
 import UpdateProduct from '../Pages/UpdateProduct/UpdateProduct';
 import Contact from '../Pages/Contact/Contact';
 import ProductDetails from '../Pages/ProductDetails/ProductDetails';
+import Login from '../Pages/Login/Login';
+import Register from '../Pages/Register/Register';
 const routes = createBrowserRouter([
   {
     path: '/',
@@ -49,6 +51,14 @@ const routes = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />,
+      },
+      {
+        path: '/login',
+        element: <Login />,
+      },
+      {
+        path: '/register',
+        element: <Register />,
       },
     ],
   },
