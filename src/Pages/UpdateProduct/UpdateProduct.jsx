@@ -22,7 +22,7 @@ const UpdateProduct = () => {
   const [selectedBrand, setSelectedBrand] = useState(brandName);
 
   useEffect(() => {
-    fetch('https://martaxo-server.vercel.app/brands')
+    fetch('https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/brands')
       .then((res) => res.json())
       .then((data) => {
         setBrands(data);
@@ -63,13 +63,16 @@ const UpdateProduct = () => {
         discription: updatedDiscription,
         rating: ratings,
       };
-      fetch(`https://martaxo-server.vercel.app/products/${_id}`, {
-        method: 'PUT',
-        headers: {
-          'content-type': 'application/json',
-        },
-        body: JSON.stringify(updateProduct),
-      })
+      fetch(
+        `https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/products/${_id}`,
+        {
+          method: 'PUT',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify(updateProduct),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.acknowledged) {

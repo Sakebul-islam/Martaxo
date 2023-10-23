@@ -12,7 +12,9 @@ const Cart = () => {
 
   useEffect(() => {
     // Fetch the user's cart items from the API using user.email
-    fetch(`https://martaxo-server.vercel.app/cart/${user.email}`)
+    fetch(
+      `https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/cart/${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setCartItems(data);
@@ -26,13 +28,16 @@ const Cart = () => {
   }, [user.email]);
 
   const handleUpdateQuantity = (itemId, newQuantity) => {
-    fetch(`https://martaxo-server.vercel.app/cart/${itemId}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ quantity: newQuantity }),
-    })
+    fetch(
+      `https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/cart/${itemId}`,
+      {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ quantity: newQuantity }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         const updatedCart = cartItems.map((item) => {
@@ -52,9 +57,12 @@ const Cart = () => {
   };
 
   const handleRemoveItem = (itemId) => {
-    fetch(`https://martaxo-server.vercel.app/cart/delete/${itemId}`, {
-      method: 'DELETE',
-    })
+    fetch(
+      `https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/cart/delete/${itemId}`,
+      {
+        method: 'DELETE',
+      }
+    )
       .then((res) => res.json())
       .then(() => {
         const updatedCart = cartItems.filter((item) => item._id !== itemId);
@@ -113,7 +121,7 @@ const Cart = () => {
                         </p>
                         <div className='flex gap-4 items-center'>
                           <button
-                            className='btn rounded-sm text-xl text-white h-auto w-auto p-3'
+                            className='btn rounded-sm text-xl bg-blue-950 border-none hover:bg-blue-900 text-white h-auto w-auto p-3'
                             onClick={() => {
                               item.quantity > 1
                                 ? handleUpdateQuantity(
@@ -129,7 +137,7 @@ const Cart = () => {
                             {item.quantity}
                           </span>
                           <button
-                            className='btn rounded-sm text-xl text-white h-auto w-auto p-3'
+                            className='btn rounded-sm text-xl bg-blue-950 border-none hover:bg-blue-900 text-white h-auto w-auto p-3'
                             onClick={() =>
                               handleUpdateQuantity(item._id, item.quantity + 1)
                             }
@@ -137,7 +145,7 @@ const Cart = () => {
                             <FaPlus />
                           </button>
                           <button
-                            className='btn rounded-sm text-xl text-white h-auto w-auto p-3'
+                            className='btn rounded-sm text-xl bg-blue-950 border-none hover:bg-blue-900 text-white h-auto w-auto p-3'
                             onClick={() => handleRemoveItem(item._id)}
                           >
                             <MdDelete />

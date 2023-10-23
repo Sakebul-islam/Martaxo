@@ -11,7 +11,9 @@ const BrandDetails = () => {
   const [productsLoading, setProductsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://martaxo-server.vercel.app/brands/${brandpath}`)
+    fetch(
+      `https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/brands/${brandpath}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setBrand(data);
@@ -21,7 +23,9 @@ const BrandDetails = () => {
   }, [brandpath]);
 
   useEffect(() => {
-    fetch(`https://martaxo-server.vercel.app/products/brand/${brandpath}`)
+    fetch(
+      `https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/products/brands/${brandpath}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

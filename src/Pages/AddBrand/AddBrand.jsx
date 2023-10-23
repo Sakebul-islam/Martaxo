@@ -15,7 +15,7 @@ const AddBrand = () => {
     const sliderImage = { 0: brandSlider1, 1: brandSlider2, 2: brandSlider3 };
     const brand = { brandName, brandImage, sliderImage };
     console.log(brandSlider1, brandSlider2, brandSlider3);
-    fetch('https://martaxo-server.vercel.app/brands', {
+    fetch('https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/brands', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

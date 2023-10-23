@@ -23,7 +23,10 @@ const routes = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
-        loader: () => fetch('https://martaxo-server.vercel.app/brands'),
+        loader: () =>
+          fetch(
+            'https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/brands'
+          ),
       },
       {
         path: '/addbrands',
@@ -40,12 +43,18 @@ const routes = createBrowserRouter([
             <AddProduct />
           </PrivateRoute>
         ),
-        loader: () => fetch('https://martaxo-server.vercel.app/brands'),
+        loader: () =>
+          fetch(
+            'https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/brands'
+          ),
       },
       {
         path: '/brand/:brandpath',
         element: <BrandDetails />,
-        loader: () => fetch('https://martaxo-server.vercel.app/brands'),
+        loader: () =>
+          fetch(
+            'https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/brands'
+          ),
       },
       {
         path: '/brand/:brandname/:id',
@@ -55,7 +64,9 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://martaxo-server.vercel.app/products/${params.id}`),
+          fetch(
+            `https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/products/${params.id}`
+          ),
       },
       {
         path: '/product/:id',
@@ -65,7 +76,9 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://martaxo-server.vercel.app/products/${params.id}`),
+          fetch(
+            `https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/products/${params.id}`
+          ),
       },
       {
         path: '/contact',

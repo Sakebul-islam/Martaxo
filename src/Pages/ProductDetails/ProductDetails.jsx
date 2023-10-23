@@ -31,7 +31,7 @@ const ProductDetails = () => {
   };
 
   const handleAddItem = () => {
-    fetch('https://martaxo-server.vercel.app/cart', {
+    fetch('https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

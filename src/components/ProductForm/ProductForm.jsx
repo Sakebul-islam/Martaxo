@@ -44,13 +44,16 @@ const ProductForm = () => {
         discription,
         rating,
       };
-      fetch('https://martaxo-server.vercel.app/products', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(product),
-      })
+      fetch(
+        'https://martaxo-server-n92vbspsb-sakebul-islam.vercel.app/products',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(product),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.acknowledged) {
