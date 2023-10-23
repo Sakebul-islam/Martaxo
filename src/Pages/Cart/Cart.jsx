@@ -181,7 +181,7 @@ const Cart = () => {
                   <li>&nbsp;$&nbsp;{totalPrice.toFixed(2)}</li>
                 </ul>
               </div>
-              <button className='btn w-full text-white rounded-sm'>
+              <button className='btn w-full text-white bg-blue-950 hover:bg-blue-900 rounded-sm'>
                 Checkout
               </button>
             </div>
