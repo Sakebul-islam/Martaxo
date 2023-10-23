@@ -44,7 +44,7 @@ const ProductForm = () => {
         discription,
         rating,
       };
-      fetch('http://localhost:5000/products', {
+      fetch('https://martaxo-server.vercel.app/products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

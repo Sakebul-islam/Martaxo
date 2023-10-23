@@ -11,7 +11,7 @@ const BrandDetails = () => {
   const [productsLoading, setProductsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/brands/${brandpath}`)
+    fetch(`https://martaxo-server.vercel.app/brands/${brandpath}`)
       .then((res) => res.json())
       .then((data) => {
         setBrand(data);
@@ -21,7 +21,7 @@ const BrandDetails = () => {
   }, [brandpath]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/brand/${brandpath}`)
+    fetch(`https://martaxo-server.vercel.app/products/brand/${brandpath}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

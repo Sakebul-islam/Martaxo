@@ -31,7 +31,7 @@ const ProductDetails = () => {
   };
 
   const handleAddItem = () => {
-    fetch('http://localhost:5000/cart', {
+    fetch('https://martaxo-server.vercel.app/cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -12,7 +12,7 @@ const Cart = () => {
 
   useEffect(() => {
     // Fetch the user's cart items from the API using user.email
-    fetch(`http://localhost:5000/cart/${user.email}`)
+    fetch(`https://martaxo-server.vercel.app/cart/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setCartItems(data);
@@ -26,7 +26,7 @@ const Cart = () => {
   }, [user.email]);
 
   const handleUpdateQuantity = (itemId, newQuantity) => {
-    fetch(`http://localhost:5000/cart/${itemId}`, {
+    fetch(`https://martaxo-server.vercel.app/cart/${itemId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const Cart = () => {
   };
 
   const handleRemoveItem = (itemId) => {
-    fetch(`http://localhost:5000/cart/delete/${itemId}`, {
+    fetch(`https://martaxo-server.vercel.app/cart/delete/${itemId}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())

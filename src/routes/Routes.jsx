@@ -23,7 +23,7 @@ const routes = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
-        loader: () => fetch('http://localhost:5000/brands'),
+        loader: () => fetch('https://martaxo-server.vercel.app/brands'),
       },
       {
         path: '/addbrands',
@@ -40,12 +40,12 @@ const routes = createBrowserRouter([
             <AddProduct />
           </PrivateRoute>
         ),
-        loader: () => fetch('http://localhost:5000/brands'),
+        loader: () => fetch('https://martaxo-server.vercel.app/brands'),
       },
       {
         path: '/brand/:brandpath',
         element: <BrandDetails />,
-        loader: () => fetch('http://localhost:5000/brands'),
+        loader: () => fetch('https://martaxo-server.vercel.app/brands'),
       },
       {
         path: '/brand/:brandname/:id',
@@ -55,9 +55,8 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(`https://martaxo-server.vercel.app/products/${params.id}`),
       },
-
       {
         path: '/product/:id',
         element: (
@@ -66,7 +65,7 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(`https://martaxo-server.vercel.app/products/${params.id}`),
       },
       {
         path: '/contact',

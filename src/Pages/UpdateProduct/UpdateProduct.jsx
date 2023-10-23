@@ -22,7 +22,7 @@ const UpdateProduct = () => {
   const [selectedBrand, setSelectedBrand] = useState(brandName);
 
   useEffect(() => {
-    fetch('http://localhost:5000/brands')
+    fetch('https://martaxo-server.vercel.app/brands')
       .then((res) => res.json())
       .then((data) => {
         setBrands(data);
@@ -63,7 +63,7 @@ const UpdateProduct = () => {
         discription: updatedDiscription,
         rating: ratings,
       };
-      fetch(`http://localhost:5000/products/${_id}`, {
+      fetch(`https://martaxo-server.vercel.app/products/${_id}`, {
         method: 'PUT',
         headers: {
           'content-type': 'application/json',
