@@ -26,7 +26,7 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 0;
 }
 .swiper-button-prev::after {
-margin-left: 25px;
+  margin-left: 25px;
 }
 .swiper-button-next::after {
   margin-right: 25px;
@@ -43,4 +43,9 @@ margin-left: 25px;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border: 2px solid orchid;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: black;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }

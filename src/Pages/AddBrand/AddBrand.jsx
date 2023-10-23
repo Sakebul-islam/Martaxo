@@ -32,13 +32,15 @@ const AddBrand = () => {
   };
   return (
     <>
-      <div className='hero bg-base-300 py-12'>
-        <div className='hero-content flex-col w-full'>
+      <div className='hero bg-white dark:bg-base-300 py-12'>
+        <div className='hero-content flex-col w-full px-2 py-0'>
           <div className='text-center lg:text-left'>
-            <h1 className='text-5xl font-bold mb-5'>Add Brand</h1>
+            <h1 className='text-5xl font-bold mb-5 text-black dark:text-white'>
+              Add Brand
+            </h1>
           </div>
-          <div className='card flex-shrink-0 w-full max-w-sm bg-base-100 rounded-none shadow-lg'>
-            <form className='card-body' onSubmit={handleBrand}>
+          <div className='card flex-shrink-0 w-full md:w-2/3 bg-base-100 rounded-none shadow-lg'>
+            <form className='card-body p-4 sm:p-8' onSubmit={handleBrand}>
               <div className='form-control'>
                 <label className='label'>
                   <span className='label-text'>Brand Name</span>

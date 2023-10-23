@@ -68,8 +68,7 @@ const Navbar = () => {
               <NavLink
                 to='/'
                 className={({ isActive }) =>
-                  `px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
-                  ${
+                  `capitalize px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap ${
                     isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''
                   }`
                 }
@@ -81,7 +80,7 @@ const Navbar = () => {
               <NavLink
                 to='/addbrands'
                 className={({ isActive }) =>
-                  `px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
+                  `capitalize px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
                   ${
                     isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''
                   }`
@@ -94,7 +93,7 @@ const Navbar = () => {
               <NavLink
                 to='/addproduct'
                 className={({ isActive }) =>
-                  `px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
+                  `capitalize px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
                   ${
                     isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''
                   }`
@@ -107,7 +106,7 @@ const Navbar = () => {
               <NavLink
                 to='/cart'
                 className={({ isActive }) =>
-                  `px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
+                  `capitalize px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
                   ${
                     isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''
                   }`
@@ -120,7 +119,7 @@ const Navbar = () => {
               <NavLink
                 to='/contact'
                 className={({ isActive }) =>
-                  `px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
+                  `capitalize px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
                   ${
                     isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''
                   }`
@@ -133,7 +132,7 @@ const Navbar = () => {
               <NavLink
                 to='/profile'
                 className={({ isActive }) =>
-                  `px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
+                  `capitalize px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
                   ${
                     isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''
                   }`
@@ -157,7 +156,10 @@ const Navbar = () => {
                   <CgProfile className='text-2xl sm:text-4xl' />
                 )}
               </li>
-              <li className='text-black dark:text-white truncate whi' title={presentUser?.name}>
+              <li
+                className='text-black dark:text-white truncate'
+                title={presentUser?.name}
+              >
                 <p>{presentUser?.name ? presentUser?.name : 'User Name'}</p>
               </li>
             </ul>

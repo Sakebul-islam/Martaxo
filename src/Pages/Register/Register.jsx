@@ -118,7 +118,7 @@ const Register = () => {
         <div className='flex flex-col text-left my-4'>
           <label htmlFor='name'>Enter Your Name</label>
           <input
-            className='outline-none p-2'
+          className='outline-none bg-white text-black p-2'
             type='text'
             name='name'
             id='name'
@@ -129,7 +129,7 @@ const Register = () => {
         <div className='flex flex-col text-left my-4'>
           <label htmlFor='name'>Profile Picture</label>
           <input
-            className='outline-none p-2'
+            className='outline-none bg-white text-black p-2'
             type='text'
             name='photo'
             id='photo'
@@ -140,7 +140,7 @@ const Register = () => {
         <div className='flex flex-col text-left my-4'>
           <label htmlFor='email'>Enter Email</label>
           <input
-            className='outline-none p-2'
+            className='outline-none bg-white text-black p-2'
             type='email'
             name='email'
             id='email'
@@ -152,7 +152,7 @@ const Register = () => {
           <label htmlFor='password'>Enter Password</label>
           <div className='w-full relative'>
             <input
-              className='outline-none p-2 w-full'
+              className='outline-none bg-white text-black p-2 w-full'
               type={showPassword ? 'text' : 'password'}
               name='password'
               id='password'

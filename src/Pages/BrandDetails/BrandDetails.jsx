@@ -50,8 +50,8 @@ const BrandDetails = () => {
             ))}
           </div>
         ) : (
-          <div className='h-[50vh] flex justify-center items-center font-bold text-5xl'>
-          ❗ No tada Found ❗
+          <div className='h-[50vh] flex justify-center items-center font-bold text-5xl text-black dark:text-white'>
+            ❗ No tada Found ❗
           </div>
         )}
       </div>

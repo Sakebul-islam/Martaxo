@@ -67,7 +67,7 @@ const Login = () => {
         <div className='flex flex-col text-left my-4'>
           <label htmlFor='email'>Enter Email</label>
           <input
-            className='outline-none p-2'
+            className='outline-none p-2 bg-white'
             type='email'
             name='email'
             id='email'
@@ -79,7 +79,7 @@ const Login = () => {
           <label htmlFor='password'>Enter Password</label>
           <div className='w-full relative'>
             <input
-              className='outline-none p-2 w-full'
+              className='outline-none p-2 bg-white w-full'
               type={showPassword ? 'text' : 'password'}
               name='password'
               id='password'

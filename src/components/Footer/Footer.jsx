@@ -3,8 +3,8 @@ import logo from '../../assets/images/logo.png';
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col items-center bg-neutral-200 dark:bg-neutral-800 text-center text-white dark:bg-gray-300'>
-      <div className='container pt-9'>
+    <footer className='flex flex-col items-center bg-neutral-200 dark:bg-neutral-800 text-center text-white'>
+      <div className='container pt-9 px-3'>
         <div className='mb-9 gap-6 sm:gap-0 flex flex-col sm:flex-row justify-center items-center sm:justify-between'>
           <figure className='max-w-[200px]'>
             <Link

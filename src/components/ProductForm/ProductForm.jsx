@@ -68,7 +68,7 @@ const ProductForm = () => {
     }
   };
   return (
-    <div className='w-2/4 shadow-2xl mx-auto p-8 my-16 bg-gray-300 text-black'>
+    <div className='w-full sm:w-4/5 lg:w-2/3 shadow-2xl mx-auto p-8 my-16 bg-gray-300 text-black'>
       <form onSubmit={handleFormData} className='flex flex-col gap-6'>
         <div className='flex flex-col gap-2'>
           <label htmlFor='name'>Item Name</label>

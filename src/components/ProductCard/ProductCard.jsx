@@ -16,11 +16,11 @@ const ProductCard = ({ product }) => {
   } = product;
 
   return (
-    <div className='p-4 bg-neutral-200 dark:text-white dark:bg-neutral-600 w-screen sm:w-auto'>
-      <figure className='bg-white'>
+    <div className='p-4 bg-neutral-200 dark:text-white dark:bg-neutral-600 w-screen sm:w-auto flex flex-col'>
+      <figure className='bg-white grow'>
         <img src={itemImage} alt={itemName} title={itemName} />
       </figure>
-      <div className='py-4 space-y-1'>
+      <div className='py-4 space-y-1 '>
         <h3 className='text-xl font-bold capitalize truncate' title={itemName}>
           {itemName}
         </h3>
@@ -32,15 +32,15 @@ const ProductCard = ({ product }) => {
           <span className='font-bold'>Item Type : </span>
           <span>{itemCatagory}</span>
         </div>
+        <div className=''>
+          <span className='font-bold'>Price : </span>
+          <span>${itemPrice}</span>
+        </div>
         <div className='flex gap-3 justify-start items-center'>
           <span className='font-bold'>Item Rating : </span>
           <div>
             {<Rating style={{ maxWidth: 100 }} value={rating} readOnly />}
           </div>
-        </div>
-        <div className=''>
-          <span className='font-bold'>Price : </span>
-          <span>${itemPrice}</span>
         </div>
         <div className='divider'></div>
         <div className='flex justify-between items-center'>
