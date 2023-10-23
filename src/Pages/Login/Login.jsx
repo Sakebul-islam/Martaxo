@@ -43,25 +43,16 @@ const Login = () => {
         });
       })
       .catch((error) => {
-        setError(error.message);
-        toast.error(
-          error.message === 'Firebase: Error (auth/user-not-found).'
-            ? "email doesn't match"
-            : error.message === 'Firebase: Error (auth/wrong-password).'
-            ? "password doesn't match"
-            : error.message,
-          {
-            // toast.error(error.message, {
-            position: 'bottom-right',
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: 'light',
-          }
-        );
+        toast.error(error.message, {
+          position: 'bottom-right',
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'light',
+        });
       });
   };
 

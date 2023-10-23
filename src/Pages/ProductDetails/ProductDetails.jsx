@@ -1,12 +1,16 @@
 import { useLoaderData } from 'react-router-dom';
-import Zoom from 'react-img-zoom-gdn';
 
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
 
+import Swal from 'sweetalert2';
+import 'sweetalert2/src/sweetalert2.scss';
+import { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
+
 const ProductDetails = () => {
+  const { user } = useContext(AuthContext);
   const productDetails = useLoaderData();
-  console.log(productDetails);
   const {
     itemName,
     itemPrice,
@@ -16,33 +20,58 @@ const ProductDetails = () => {
     brandName,
     rating,
   } = productDetails;
+
+  const cart = {
+    itemName,
+    itemPrice,
+    itemImage,
+    itemCatagory,
+    quantity: 1,
+    userEmail: user.email,
+  };
+
+  const handleAddItem = () => {
+    fetch('http://localhost:5000/cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(cart),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.acknowledged) {
+          Swal.fire({
+            position: 'center-center',
+            icon: 'success',
+            title: 'Product Added Successfully',
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      });
+    console.log(cart);
+  };
   return (
-    <div className='py-10'>
-      <div className='container mx-auto grid gap-6 grid-cols-2'>
-        <figure className='rounded-3xl'>
-          <Zoom
-            img={itemImage}
-            zoomScale={2}
-            height={600}
-            transitionTime={0.5}
-          />
-          ;
+    <div className='py-10 px-2'>
+      <div className='container mx-auto flex gap-6 flex-col md:flex-row'>
+        <figure className='rounded-3xl h-auto md:flex-1'>
+          <img src={itemImage} className='w-full' />
         </figure>
-        <div className='py-6'>
+        <div className='py-6 bg-white text-black dark:bg-black dark:text-white  md:flex-1'>
           <div className='text-3xl font-bold capitalize'>
             <h2>{itemName}</h2>
           </div>
           <div className='divider'></div>
           <div className='text-lg capitalize mb-8'>
-            <div className='flex w-full'>
-              <div className='flex flex-row justify-start p-4 items-center flex-grow bg-neutral-200  place-items-center'>
+            <div className='flex flex-col lg:flex-row w-full gap-4'>
+              <div className='flex flex-row justify-start p-4 items-center flex-grow bg-neutral-100 text-black place-items-center'>
                 <span className='font-bold inline-block'>
                   Brand Name :&nbsp;
                 </span>
                 <span className='font-bold inline-block'>{brandName}</span>
               </div>
-              <div className='divider divider-horizontal'></div>
-              <div className='flex flex-row justify-start p-4 items-center flex-grow bg-neutral-200  place-items-center'>
+              <div className='flex flex-row justify-start p-4 items-center flex-grow bg-neutral-100 text-black place-items-center'>
                 <span className='font-bold inline-block'>
                   Product Type :&nbsp;
                 </span>
@@ -52,7 +81,7 @@ const ProductDetails = () => {
           </div>
           <div className='flex gap-4'>
             <Rating style={{ maxWidth: 100 }} value={rating} readOnly />
-            <span className='bg-neutral-300 px-1 rounded-sm font-bold'>
+            <span className='bg-neutral-300 px-1 rounded-sm font-bold text-black'>
               {rating}
             </span>
           </div>
@@ -64,7 +93,10 @@ const ProductDetails = () => {
           <div className='divider'></div>
           <div className='flex gap-10 justify-start items-center'>
             <h2 className='text-2xl font-bold'> &#36;&nbsp;{itemPrice}</h2>
-            <button className='btn bg-orange-500 hover:bg-green-500 text-md font-bold text-white'>
+            <button
+              onClick={handleAddItem}
+              className='btn bg-orange-500 hover:bg-green-500 text-md font-bold text-white'
+            >
               Add to Cart
             </button>
           </div>

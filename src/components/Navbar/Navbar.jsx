@@ -20,6 +20,7 @@ const Navbar = () => {
     setPresentUser({
       profilePicture: user?.photoURL,
       name: user?.displayName,
+      email: user?.email,
     });
   };
 
@@ -47,10 +48,9 @@ const Navbar = () => {
         console.log(error);
       });
   };
-
   return (
     <div className='bg-gray-200 dark:bg-gray-950 shadow  lg:sticky top-0 z-50'>
-      <div className='container mx-auto flex flex-col xl:flex-row justify-between items-center py-5 gap-6'>
+      <div className='container mx-auto flex flex-col xl:flex-row justify-between items-center xl:px-1 py-5 gap-6'>
         <figure className='max-w-[200px]'>
           <Link
             to='/'
@@ -68,8 +68,7 @@ const Navbar = () => {
               <NavLink
                 to='/'
                 className={({ isActive }) =>
-                  `
-                  px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white
+                  `px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
                   ${
                     isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''
                   }`
@@ -82,8 +81,7 @@ const Navbar = () => {
               <NavLink
                 to='/addbrands'
                 className={({ isActive }) =>
-                  `
-                  px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white
+                  `px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
                   ${
                     isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''
                   }`
@@ -96,8 +94,7 @@ const Navbar = () => {
               <NavLink
                 to='/addproduct'
                 className={({ isActive }) =>
-                  `
-                  px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white
+                  `px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
                   ${
                     isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''
                   }`
@@ -110,8 +107,7 @@ const Navbar = () => {
               <NavLink
                 to='/cart'
                 className={({ isActive }) =>
-                  `
-                  px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white
+                  `px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
                   ${
                     isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''
                   }`
@@ -124,8 +120,7 @@ const Navbar = () => {
               <NavLink
                 to='/contact'
                 className={({ isActive }) =>
-                  `
-                  px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white
+                  `px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
                   ${
                     isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''
                   }`
@@ -138,8 +133,7 @@ const Navbar = () => {
               <NavLink
                 to='/profile'
                 className={({ isActive }) =>
-                  `
-                  px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white
+                  `px-3 py-2 sm:px-4 sm:py-3 inline-block text-black dark:text-white whitespace-nowrap
                   ${
                     isActive ? 'bg-orange-600 !text-white dark:!text-black' : ''
                   }`
@@ -149,7 +143,7 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          <div className='flex flex-row justify-between items-center gap-2'>
+          <div className='flex flex-row justify-between items-center gap-3'>
             <ul className='profile flex flex-row justify-between items-center gap-2'>
               <li className=''>
                 {presentUser.profilePicture ? (
@@ -163,7 +157,7 @@ const Navbar = () => {
                   <CgProfile className='text-2xl sm:text-4xl' />
                 )}
               </li>
-              <li className='text-black dark:text-white'>
+              <li className='text-black dark:text-white truncate whi' title={presentUser?.name}>
                 <p>{presentUser?.name ? presentUser?.name : 'User Name'}</p>
               </li>
             </ul>
@@ -171,7 +165,7 @@ const Navbar = () => {
               {user ? (
                 <Link to='/login'>
                   <button
-                    className='px-2 py-1 sm:px-4 sm:py-2 bg-black dark:bg-white text-white dark:text-black font-bold text-lg'
+                    className='px-2 py-1 sm:px-4 sm:py-2 bg-black dark:bg-white text-white dark:text-black font-bold text-lg whitespace-nowrap'
                     onClick={handleSignout}
                   >
                     Sign Out
@@ -179,7 +173,7 @@ const Navbar = () => {
                 </Link>
               ) : (
                 <Link to='/login'>
-                  <button className='px-2 py-1 sm:px-4 sm:py-2 bg-black dark:bg-white text-white dark:text-black font-bold text-lg'>
+                  <button className='px-2 py-1 sm:px-4 sm:py-2 bg-black dark:bg-white text-white dark:text-black font-bold text-lg whitespace-nowrap'>
                     Login
                   </button>
                 </Link>
