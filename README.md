@@ -1,4 +1,5 @@
 # Live Project link : [MARTAXO](https://martaxo.netlify.app/)
+
 ## Backend Code : [MARTAXO](https://github.com/Sakebul-islam/martaxo-server-side.git)
 
 ## Project Overview
@@ -11,7 +12,7 @@ This project involves creating a dynamic website specializing in Technology and 
 
 - <b>API-Based Brand Information:</b> Fetch and display brand information on the homepage dynamically using external APIs, creating a real-time brand list.
 
-- <b>Dark and Light Theme Switching:</b> Provide a theme toggle feature that allows users to switch between dark and light themes to customize their viewing experience.
+- <b>Dark & Light Theme Switching:</b> Provide a theme toggle feature that allows users to switch between dark and light themes to customize their viewing experience.
 
 - <b>Private Routes:</b> Create private routes that require user authentication to access, ensuring that certain pages and features are only available to logged-in users.
 
@@ -28,4 +29,5 @@ This project involves creating a dynamic website specializing in Technology and 
 - <b>Product Information Updates:</b> Allow users to edit and update product information, including image, name, brand, type, price, and rating for each product.
 
 ## Website Screenshot
+
 ![MARTAXO!](https://raw.githubusercontent.com/Sakebul-islam/Kola/main/src/assets/images/kola-sakib.netlify.app_.png)

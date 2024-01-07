@@ -62,7 +62,7 @@ const Login = () => {
         className='text-center w-11/12 md:w-1/2 mx-auto my-6 bg-gray-200 dark:bg-slate-300 text-black p-6'
         onSubmit={handleLogin}
       >
-        <legend className='text-2xl font-bold'>Signin Form</legend>
+        <legend className='text-2xl font-bold'>SignIn Form</legend>
 
         <div className='flex flex-col text-left my-4'>
           <label htmlFor='email'>Enter Email</label>
