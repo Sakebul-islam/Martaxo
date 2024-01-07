@@ -29,5 +29,5 @@ This project involves creating a dynamic website specializing in Technology and 
 - <b>Product Information Updates:</b> Allow users to edit and update product information, including image, name, brand, type, price, and rating for each product.
 
 ## Website Screenshot
-![MARTAXO!](https://raw.githubusercontent.com/Sakebul-islam/Martaxo/main/src/assets/images/screencapture-martaxo-netlify-app-2023-12-09-05_50_33.png)
+![MARTAXO!](https://raw.githubusercontent.com/Sakebul-islam/Martaxo/main/src/assets/images/screencapture.png)
 
